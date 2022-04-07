@@ -107,6 +107,11 @@ public class Postagem {
      * processo de Desenvolvimento.
 	 * 
 	 */	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -150,4 +155,14 @@ public class Postagem {
 		this.tema = tema;
 	}
 
+	 // Métodos Get e Set para o atributo usuario
+	
+
+	public Usuario getUsuario() {
+		return this.usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 }
